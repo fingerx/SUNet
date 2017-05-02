@@ -73,10 +73,10 @@ public class Client : SUNet {
 
     //----------------------------------------------------------------------------------------------------------
     void Start () {
-        //Start a connection on a system asigned port
+        //Start a connection on a system assigned port
         StartConnection();
         
-        //Connection to specific target (Server)
+        //Connection to a specific target (Server)
         ServerConnection = new IPEndPoint(IPAddress.Parse(serverIP), serverport);
         
         InvokeRepeating("Pinger", 2, 0.1f);
@@ -122,13 +122,13 @@ public class Client : SUNet {
 ## Comparisson tests
 
 
-### rUDP and Latency 
+### rUDP and Latency
 * Normal Unreliable latency is 0.5ms on average.
 * Normal Reliable latency is 2.5ms on average.
 * Running a 50% packet loss on both Server and Client sides, brings up the average latency to 80 ms
 
 Keep in mind that this is the time taken for a message to leave the client, get echoes back from the server and pushes to main thread in both sides until it is actually read on main thread.
-
+These times were measured on the same machine
 
 
 ### NetMessage serlialization
