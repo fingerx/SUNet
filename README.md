@@ -119,7 +119,7 @@ public class Client : SUNet {
 ```
 
 
-## Comparisson tests
+## Comparison tests
 
 
 ### rUDP and Latency
